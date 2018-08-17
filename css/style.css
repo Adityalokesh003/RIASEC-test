@@ -1,12 +1,12 @@
 body {
-	background: #a2a7ad;
+	background: #ECEBBD;
 	background-position: center;
+	color: #471b21;
 }
 a {
 	text-decoration: none;
 }
 .main {
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -37,10 +37,11 @@ a {
 .test-btn{
 	display: inline-block;
 	font-size: 1.15em;
+	border: 1px solid black;
 	border-radius: 8px;
 	cursor: pointer;
-	color: #3F729B;
-	background: #ccffcc;
+	color: #fff;
+	background: #aa404e;
 	border: none;
 	padding: 5px 25px;
 }
@@ -49,22 +50,35 @@ a {
 	background: #3F729B;
 }
 
+.form {
+	flex: 0 1 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /* test form page*/
 .table {
     border-collapse: collapse;
-    width: 100%;
+	width: 100%;
 	font-size: 1.2em;
 }
 
 .table th, .table td {
     padding: 8px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
 }
-
+.table tr th {
+	background: #292C2F;
+	color: #fff;
+}
+.table tr td:nth-child(1) {
+	text-align: left;
+}
+  
 .table tr:hover {
-	background-color:#f5f5f5;
+	background-color:#471b21;
+	color: #ECEBBD;
 }
 
 .form_submit {
@@ -83,4 +97,20 @@ a {
 }
 .message {
 	color: red;
+}
+
+@media screen and (max-width: 550px){
+	.main{
+		justify-content: space-between;
+	}
+	.header,.test-btn {
+		font-size: 1em;
+	}
+	.form,.intro-details,.result {
+	font-size: 0.9em;
+	padding: 4px;
+	}
+	.table th, .table td {
+    padding: 4px;
+	}
 }
